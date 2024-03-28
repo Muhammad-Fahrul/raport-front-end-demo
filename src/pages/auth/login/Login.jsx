@@ -32,7 +32,7 @@ const Login = () => {
 
         dispatch(setCredentials(fakeData));
         setError(null);
-        navigate('/');
+        navigate('/raport-front-end-demo');
       } catch (err) {
         setError(err.message);
       } finally {

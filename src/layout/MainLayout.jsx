@@ -16,8 +16,8 @@ const MainLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (user && location.pathname === '/login') {
-      navigate('/');
+    if (user && location.pathname === '/raport-front-end-demo/login') {
+      navigate('/raport-front-end-demo');
     }
   }, [user, navigate, location]);
 

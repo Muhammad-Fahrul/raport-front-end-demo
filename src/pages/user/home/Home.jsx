@@ -30,7 +30,7 @@ const Home = () => {
             <strong> Your Journey</strong>
           </p>
         </div>
-        <Button url={`/${username}`} text="Let's Go" />
+        <Button url={`${username}`} text="Let's Go" />
       </div>
     </div>
   );

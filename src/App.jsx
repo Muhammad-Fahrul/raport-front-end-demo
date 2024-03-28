@@ -28,7 +28,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/raport-front-end-demo" element={<MainLayout />}>
             <Route path="login" element={<Login />} />
 
             <Route element={<RequireAuth roles={allRoles} />}>

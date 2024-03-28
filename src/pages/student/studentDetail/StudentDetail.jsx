@@ -23,7 +23,7 @@ const StudentDetail = () => {
     if (confirm('anda ingin menghapus siswa ini')) {
       dispatch(deleteStudentById(studentId));
       alert(`Santri dengan nama ${student.username} berhasil dihapus`);
-      navigate('/students', { replace: true });
+      navigate('/raport-front-end-demo/students', { replace: true });
     }
   };
 
@@ -59,7 +59,9 @@ const StudentDetail = () => {
         />
         <button
           className="back"
-          onClick={() => navigate('/students', { replace: true })}
+          onClick={() =>
+            navigate('/raport-front-end-demo/students', { replace: true })
+          }
         >
           <p>&lt;</p>
         </button>

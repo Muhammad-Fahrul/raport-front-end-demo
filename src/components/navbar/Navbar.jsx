@@ -17,7 +17,7 @@ const Navbar = () => {
     <div className={`container-navbar ${height >= 10 ? 'shadow' : ''}`}>
       <div className="wrapper">
         <div className="left">
-          <Link to="/">
+          <Link to="/raport-front-end-demo">
             <h1>
               R<span style={{ fontSize: '1rem' }}>aport</span>
             </h1>
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="right">
           {user?.username && (
             <div className="nav-btns">
-              <Link to={`/${username}`}>
+              <Link to={`/raport-front-end-demo/${username}`}>
                 <span className="profile">
                   <img src={profileIcon} alt={username} />
                 </span>

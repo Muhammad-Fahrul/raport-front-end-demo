@@ -9,9 +9,17 @@ const RequireAuth = ({ roles }) => {
   const content = roles.includes(role) ? (
     <Outlet />
   ) : !role ? (
-    <Navigate to="/login" state={{ from: location }} replace />
+    <Navigate
+      to="/raport-front-end-demo/login"
+      state={{ from: location }}
+      replace
+    />
   ) : (
-    <Navigate to="/notfound" state={{ from: location }} replace />
+    <Navigate
+      to="/raport-front-end-demo/notfound"
+      state={{ from: location }}
+      replace
+    />
   );
 
   return content;

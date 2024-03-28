@@ -12,7 +12,7 @@ const Student = ({ student }) => {
   const location = useLocation();
 
   const handleToRaport = () =>
-    navigate(`/raport-front-end-demo/students/${student.username}/raports`, {
+    navigate(`/students/${student.username}/raports`, {
       state: { from: location },
     });
 
@@ -21,9 +21,7 @@ const Student = ({ student }) => {
       <div className="top">
         <p
           className="description"
-          onClick={() =>
-            navigate(`/raport-front-end-demo/students/${student.id}`)
-          }
+          onClick={() => navigate(`/students/${student.id}`)}
         >
           {student.username}
         </p>

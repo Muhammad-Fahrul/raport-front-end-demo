@@ -3,7 +3,7 @@ import './studentDetail.css';
 import profileIcon from '../../../assets/icons/user.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import {
   deleteStudentById,
@@ -14,6 +14,9 @@ const StudentDetail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { studentId } = useParams();
+  const location = useLocation();
+
+  const previousPath = location.state && location.state.from.pathname;
 
   const student = useSelector((state) =>
     selectStudentWithStats(state, studentId)
@@ -23,7 +26,7 @@ const StudentDetail = () => {
     if (confirm('anda ingin menghapus siswa ini')) {
       dispatch(deleteStudentById(studentId));
       alert(`Santri dengan nama ${student.username} berhasil dihapus`);
-      navigate('/students', { replace: true });
+      navigate(previousPath, { replace: true });
     }
   };
 
@@ -59,7 +62,7 @@ const StudentDetail = () => {
         />
         <button
           className="back"
-          onClick={() => navigate('/students', { replace: true })}
+          onClick={() => navigate(previousPath, { replace: true })}
         >
           <p>&lt;</p>
         </button>

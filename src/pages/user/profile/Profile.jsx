@@ -31,7 +31,7 @@ const Profile = () => {
     if (confirm('anda yakin ingin keluar')) {
       const removeCred = async () => {
         dispatch(rmCredentials());
-        navigate('/login');
+        navigate('/raport-front-end-demo/login');
       };
       removeCred();
     }
@@ -39,7 +39,7 @@ const Profile = () => {
 
   const buttonAuthUser = userDisplayed.username === authUser.username && (
     <div>
-      <button onClick={() => navigate(`/${authUser.username}/edit`)}>
+      <button onClick={() => navigate(`edit`)}>
         <img title="edit" src={editIcon} alt="" />
       </button>
       <button onClick={logoutHandler}>
@@ -49,15 +49,10 @@ const Profile = () => {
   );
 
   const buttonMentor = userDisplayed.username === authUser.username &&
-    authUser.role === 'mentor' && <Button url="/students" text="Students" />;
+    authUser.role === 'mentor' && <Button url="students" text="Students" />;
 
   const buttonStudent = userDisplayed.username === authUser.username &&
-    authUser.role === 'student' && (
-      <Button
-        url={`/students/${userDisplayed.username}/raports`}
-        text="Raport"
-      />
-    );
+    authUser.role === 'student' && <Button url={`raports`} text="Raport" />;
 
   let content = (
     <div className="description">

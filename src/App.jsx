@@ -28,19 +28,22 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/raport-front-end-demo" element={<MainLayout />}>
             <Route path="login" element={<Login />} />
 
             <Route element={<RequireAuth roles={allRoles} />}>
               <Route index element={<Home />} />
-              <Route path=":username" element={<Profile />} />
-              <Route path=":username/edit" element={<EditUser />} />
-              <Route path="students">
-                <Route element={<RequireAuth roles={ROLES.mentor} />}>
+              <Route path=":username">
+                <Route index element={<Profile />} />
+                <Route path="edit" element={<EditUser />} />
+                <Route
+                  path="students"
+                  element={<RequireAuth roles={ROLES.mentor} />}
+                >
                   <Route index element={<StudentList />} />
+                  <Route path=":studentId" element={<StudentDetail />} />
+                  <Route path=":username/raports" element={<RaportList />} />
                 </Route>
-                <Route path=":studentId" element={<StudentDetail />} />
-                <Route path=":username/raports" element={<RaportList />} />
               </Route>
             </Route>
 

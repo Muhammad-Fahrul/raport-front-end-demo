@@ -12,17 +12,20 @@ const Student = ({ student }) => {
   const location = useLocation();
 
   const handleToRaport = () =>
-    navigate(`/students/${student.username}/raports`, {
+    navigate(`${student.username}/raports`, {
       state: { from: location },
     });
+
+  const handleToDetail = () => {
+    navigate(`${student.id}`, {
+      state: { from: location },
+    });
+  };
 
   let content = (
     <li className="container-student">
       <div className="top">
-        <p
-          className="description"
-          onClick={() => navigate(`/students/${student.id}`)}
-        >
+        <p className="description" onClick={handleToDetail}>
           {student.username}
         </p>
       </div>

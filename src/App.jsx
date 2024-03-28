@@ -1,7 +1,7 @@
 import './App.css';
 
 import { Provider } from 'react-redux';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import store from './app/store.js';
 import { ROLES } from './config/roles.js';
@@ -26,9 +26,9 @@ function App() {
   const allRoles = [...Object.values(ROLES)];
   return (
     <Provider store={store}>
-      <Router path="/raport-front-end-demo">
+      <Router>
         <Routes>
-          <Route element={<MainLayout />}>
+          <Route path="/" element={<MainLayout />}>
             <Route path="login" element={<Login />} />
 
             <Route element={<RequireAuth roles={allRoles} />}>
@@ -44,7 +44,7 @@ function App() {
               </Route>
             </Route>
 
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Router>

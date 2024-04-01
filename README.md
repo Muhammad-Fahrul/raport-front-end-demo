@@ -1,8 +1,15 @@
-# React + Vite
+# E-Raport TPQ Web App
+In indonesia, childrens learn how to read al-qur'an- islam's holy book,
+by coming to a place call TPQ which stand for Tempat Pembelajaran Qur'an
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+And Here it is, A E-raport that helps the teacher of TPQ to record the achievement of their students,
+## feature
+  - registering new mentor (teacher)
+  - registering new student by mentor
+  - deleteing student by mentor
+  - adding new record of a student daily achievement
+  - delete a record of a student
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### DEMO VERSION
+  USERNAME: mentor
+  password: mentor

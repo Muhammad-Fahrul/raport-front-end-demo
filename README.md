@@ -11,5 +11,5 @@ And Here it is, A E-raport that helps the teacher of TPQ to record the achieveme
   - delete a record of a student
 
 ### DEMO VERSION
-  USERNAME: mentor
-  password: mentor
+  USERNAME: mentor;
+  PASSWORD: mentor;
